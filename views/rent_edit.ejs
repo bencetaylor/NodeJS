@@ -1,0 +1,33 @@
+<% include headeruser %>
+        <div class="col-md-push-3 col-md-6 col-xs-12">
+            <h2>Rent edit</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="employee">Customer</label>
+                    <select id="employee" class="form-control">
+                        <option>Lorem ipsum</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="car">Car</label>
+                    <select id="car" class="form-control">
+                        <option>BMW 318i</option>
+                        <option>TOYOTA RAV4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="start">Rent starts</label>
+                    <input type="date" id="start" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="end">Rent ends</label>
+                    <input type="date" id="end" class="form-control">
+                </div>
+                <div class="form-group">
+                    <a href="/rents" class="btn btn-primary">Save</a>
+                    <a href="/rents" class="btn btn-default">Cancel</a>
+                </div>
+            </form>
+        </div>
+<% include footer %>

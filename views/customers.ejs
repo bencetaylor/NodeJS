@@ -1,0 +1,41 @@
+<% include headeruser %>
+<div class="col-md-push-3 col-md-6 col-xs-12">
+    <h2>Customers</h2>
+    <table class="table table-stripped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Personal ID</th>
+            <th>License ID</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Kiss József</td>
+            <td>kissjozsi@gmail.com</td>
+            <td>123456AB</td>
+            <td>AB123456</td>
+            <td class="text-right">
+                <a href="/customers/01/edit" class="btn btn-sm btn-primary">Edit</a>
+                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Nagy István</td>
+            <td>nagypisti@freemail.hu</td>
+            <td>654321BA</td>
+            <td>CD654321</td>
+            <td class="text-right">
+                <a href="/customers/02/edit" class="btn btn-sm btn-primary">Edit</a>
+                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="text-center">
+        <a href="/customers/new" class="btn btn-lg btn-primary">New customer</a>
+    </div>
+</div>
+<% include footer %>

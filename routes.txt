@@ -1,0 +1,112 @@
+/**
+* Fontos a sorrend a routing tablaban!!!
+*/
+
+GET / - fooldal
+- main_redirectMW
+
+<-------------------------------------------->
+
+GET + POST /cars/add - uj autot vehetunk fel
+- authMW
+- updateCarMW
+- renderMW
+
+GET /cars/del/:id - torli az autot
+- authMW
+- getCarMW
+- deleteCarMW
+
+GET + POST /cars/mod/:id - modosithatjuk az adott id-ju autot
+- authMW
+- getCarMW
+- updateCarMW
+- renderMW
+
+GET /cars - listazza az autokat
+- authMW
+- getCarListMW
+- renderMW
+
+<-------------------------------------------->
+
+GET /customers - listazza az ugyfeleket
+- authMW
+- getCustomerListMW
+- renderMW
+
+GET + POST /customers/add
+- authMW
+- updateCustomersMW
+- renderMW
+
+GET /customers/del/:id
+- authMW
+- getCustomerMW
+- deleteCustomerMW
+
+GET + POST /customers/mod/:id
+- authMW
+- getCustomerMW
+- updateCustomerMW
+- renderMW
+
+<-------------------------------------------->
+
+GET /rents - listazza a kolcsonzeseket
+- authMW
+- getRentListMW
+- renderMW
+
+GET + POST /rents/add
+- authMW
+- updateRentMW
+- renderMW
+
+GET /rents/del/:id
+- authMW
+- getRentMW
+- deleteRentMW
+
+GET + POST /rents/mod/:id
+- authMW
+- getRentMW
+- updateRentMW
+- renderMW
+
+<-------------------------------------------->
+
+GET + POST /login
+- inverseAuthMW
+- checkUserLogInMW
+- renderMW
+
+GET /logout
+- logoutMW
+
+<-------------------------------------------->
+<-------------------------------------------->
+
+Middleware-ek:
+
+getCarMW    x
+getCarListMW    x
+deleteCarMW     x
+updateCarMW     x
+
+getCustomerMW
+getCustomerListMW
+deleteCustomerMW
+updateCustomerMW
+
+getRentMW
+getRentListMW
+deleteRentMW
+updateRentMW
+
+authMW
+inverseAuthMW
+checkUserLogInMW
+main_redirectMW
+renderMW
+logoutMW

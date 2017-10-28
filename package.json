@@ -1,0 +1,17 @@
+{
+  "name": "car-rent",
+  "version": "0.0.1",
+  "description": "Minta feladat",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Bence Szabo",
+  "license": "MYlicense",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0"
+  }
+}

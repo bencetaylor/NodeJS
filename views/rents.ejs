@@ -1,0 +1,41 @@
+<% include headeruser %>
+<div class="col-md-push-3 col-md-6 col-xs-12">
+    <h2>Car list</h2>
+    <table class="table table-stripped">
+        <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Car</th>
+            <th>Rent start</th>
+            <th>Rent end</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Kiss József</td>
+            <td>TOYOTA RAV4</td>
+            <td>2017-10-28</td>
+            <td>2017-10-31</td>
+            <td class="text-right">
+                <a href="/rents/01/edit" class="btn btn-sm btn-primary">Edit</a>
+                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Nagy István</td>
+            <td>BMW 318i</td>
+            <td>2017-10-15</td>
+            <td>2017-10-30</td>
+            <td class="text-right">
+                <a href="/rents/01/edit" class="btn btn-sm btn-primary">Edit</a>
+                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="text-center">
+        <a href="/rents/new" class="btn btn-lg btn-primary">New rent</a>
+    </div>
+</div>
+<% include footer %>

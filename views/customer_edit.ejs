@@ -1,0 +1,32 @@
+<% include headeruser %>
+<div class="col-md-push-3 col-md-6 col-xs-12">
+    <h2>Customer edit</h2>
+
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="PID">Personal ID</label>
+            <input type="text" id="PID" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="license">License ID</label>
+            <input type="text" id="license" class="form-control">
+        </div>
+        <div>
+            <label for="bdate">Birth date</label>
+            <input type="date" id="bdate" class="form-control">
+        </div>
+        <div class="form-group">
+            <a href="/customers" class="btn btn-primary">Save</a>
+            <a href="/customers" class="btn btn-default">Cancel</a>
+        </div>
+    </form>
+</div>
+<% include footer %>
