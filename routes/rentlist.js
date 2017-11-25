@@ -36,7 +36,7 @@ module.exports = function (app) {
      */
     app.use('/rents/:rentid/edit',
         authMW(objectRepository),
-        getRentMW()objectRepository),
+        getRentMW(objectRepository),
         updateRentMW(objectRepository),
         renderMW(objectRepository, 'addrent')
     );
