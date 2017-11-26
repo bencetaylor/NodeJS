@@ -10,3 +10,25 @@ module.exports = function (objectrepository) {
         return next();
     };
 };
+
+
+module.exports = function (objectrepository) {
+
+    var customerModel = requireOption(objectrepository, 'customerModel');
+
+    return function (req, res, next) {
+
+        customerModel.findOne({
+            _id: req.param('customerId')
+            // AssignedTo ??? kell ez ide?
+        }).populate('_assignedto').exec(function (err, result) {
+            if ((err) || (!result)) {
+                return res.redirect('/cars');
+            }
+
+            res.tpl.task = result;
+            return next();
+        });
+    };
+
+};
