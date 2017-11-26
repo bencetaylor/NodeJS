@@ -5,7 +5,15 @@ var requireOption = require('../common').requireOption;
  */
 module.exports = function (objectrepository) {
     var customerModel = requireOption(objectrepository, 'customerModel');
+
     return function (req, res, next) {
-        return next();
+        customerModel.find({
+        }).exec(function (err, results) {
+            if (err) {
+                return next(new Error('Error getting customers'));
+            }
+            res.tpl.tasks = results;
+            return next();
+        });
     };
 };

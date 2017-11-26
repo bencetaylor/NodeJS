@@ -12,14 +12,11 @@ module.exports = function (objectrepository) {
     return function (req, res, next) {
 
         carModel.findOne({
-            // Lehet hogy a carid nem lesz jó -> TODO carId
-            _id: req.param('carid')
-            //AssignedTo se kell valószínűleg...
-        }).populate('_assignedto').exec(function (err, result) {
+            'plate': req.param('plate')
+        }).exec(function (err, result) {
             if ((err) || (!result)) {
                 return res.redirect('/cars');
             }
-
             res.tpl.task = result;
             return next();
         });

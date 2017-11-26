@@ -21,6 +21,7 @@ module.exports = function (objectrepository) {
         }
 
         var car = undefined;
+        // Ha már létezik módosítjuk, egyébként újat hozunk létre
         if (typeof res.tpl.car !== 'undefined') {
             car = res.tpl.car;
         } else {
@@ -35,7 +36,7 @@ module.exports = function (objectrepository) {
             if (err) {
                 return next(err);
             }
-
+            // Remélhatőleg itt az "id"-től nem száll el :D
             return res.redirect('/car/' + result.id);
         });
     };

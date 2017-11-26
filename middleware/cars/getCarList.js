@@ -11,12 +11,10 @@ module.exports = function (objectrepository) {
     return function (req, res, next) {
 
         carModel.find({
-        // AssignedTo ???
-        }).populate('_assignedto').exec(function (err, results) {
+        }).exec(function (err, results) {
             if (err) {
                 return next(new Error('Error getting cars'));
             }
-
             res.tpl.tasks = results;
             return next();
         });
