@@ -9,7 +9,7 @@ module.exports = function (objectrepository) {
         if (typeof req.session.userid === 'undefined') {
             return res.redirect('/login');
         } else {
-            return res.redirect('/tasks');
+            return res.redirect('/rents');
         }
     };
 };

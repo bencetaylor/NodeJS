@@ -4,7 +4,7 @@ var checkUserLogInMW = require('../middleware/generic/checkUserLogIn');
 var renderMW = require('../middleware/generic/render');
 var auth = require('../middleware/generic/auth');
 var logoutMW = require('../middleware/generic/logout');
-var userModel = {};
+var userModel = require('../models/user');
 
 module.exports = function (app) {
 

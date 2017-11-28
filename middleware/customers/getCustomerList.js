@@ -12,7 +12,7 @@ module.exports = function (objectrepository) {
             if (err) {
                 return next(new Error('Error getting customers'));
             }
-            res.tpl.tasks = results;
+            res.tpl.customers = results;
             return next();
         });
     };

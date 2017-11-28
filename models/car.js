@@ -8,4 +8,4 @@ var Car = db.model('Car', {
     price: Number
 });
 
-module.exports = Cars;
+module.exports = Car;

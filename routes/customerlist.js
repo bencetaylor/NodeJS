@@ -5,7 +5,7 @@ var getCustomerListMW = require('../middleware/customers/getCustomerList');
 var updateCustomerMW = require('../middleware/customers/updateCustomer');
 var getCustomerMW = require('../middleware/customers/getCustomer');
 var deleteCustomerMW = require('../middleware/customers/deleteCustomer');
-var customerModel = {};
+var customerModel = require('../models/customer');
 
 module.exports = function (app) {
 

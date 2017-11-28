@@ -2,28 +2,38 @@
 <div class="col-md-push-3 col-md-6 col-xs-12">
     <h2>Customer edit</h2>
 
-    <form>
+    <form method="post">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" class="form-control">
+            <input type="text" id="name" class="form-control"
+                   value="<%= (typeof customer !== 'undefined') ? customer.name : '' %>">
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" id="email" class="form-control">
+            <input type="text" id="email" class="form-control"
+                   value="<%= (typeof customer !== 'undefined') ? customer.email : '' %>">
         </div>
         <div class="form-group">
             <label for="PID">Personal ID</label>
-            <input type="text" id="PID" class="form-control">
+            <input type="text" id="PID" class="form-control"
+                   value="<%= (typeof customer !== 'undefined') ? customer.PID : '' %>">
         </div>
         <div class="form-group">
             <label for="license">License ID</label>
-            <input type="text" id="license" class="form-control">
+            <input type="text" id="license" class="form-control"
+                   value="<%= (typeof customer !== 'undefined') ? customer.license : '' %>">
         </div>
         <div>
             <label for="bdate">Birth date</label>
-            <input type="date" id="bdate" class="form-control">
+            <input type="date" id="bdate" class="form-control"
+                   value="<%= (typeof customer !== 'undefined') ? customer.birthDate : '' %>">
         </div>
         <div class="form-group">
+            <% if (typeof customer !== 'undefined'){ %>
+            <input type="submit" class="btn btn-primary" value="New customer"/>
+            <% }else{ %>
+            <input type="submit" class="btn btn-primary" value="Save customer"/>
+            <% } %>
             <a href="/customers" class="btn btn-primary">Save</a>
             <a href="/customers" class="btn btn-default">Cancel</a>
         </div>

@@ -12,6 +12,7 @@ module.exports = function (objectrepository) {
     return function (req, res, next) {
 
         carModel.findOne({
+            //_id: req.param('carid')
             'plate': req.param('plate')
         }).exec(function (err, result) {
             if ((err) || (!result)) {

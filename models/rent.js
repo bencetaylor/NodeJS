@@ -11,8 +11,11 @@ var Rent = db.model('Rent', {
         type: Schema.Types.ObjectId,
         ref: 'Customer'
     },
-    startDate: Date,
+    startDate: {
+        type: Date,
+        default: Date.now
+    },
     endDate: Date
 });
 
-module.exports = Rents;
+module.exports = Rent;

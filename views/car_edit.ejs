@@ -5,26 +5,33 @@
     <form>
         <div class="form-group">
             <label for="brand">Brand</label>
-            <input type="text" id="brand" class="form-control">
+            <input type="text" id="brand" class="form-control"
+                   value="<%= (typeof car !== 'undefined') ? car.brand : '' %>">
         </div>
         <div class="form-group">
             <label for="type">Type</label>
-            <select id="type" class="form-control">
+            <input type="text" id="type" class="form-control"
+                   value="<%= (typeof car !== 'undefined') ? car.type : '' %>">
+           <!-- <select id="type" class="form-control">
                 <option>SUV</option>
                 <option>Limusine</option>
                 <option>Coupe</option>
             </select>
+            -->
         </div>
         <div class="form-group">
             <label for="plate">Serial</label>
-            <input type="text" id="plate" class="form-control">
+            <input type="text" id="plate" class="form-control"
+                   value="<%= (typeof car !== 'undefined') ? car.plate : '' %>">
         </div>
         <div>
             <label for="price">Price €/day</label>
-            <input type="number" id="price" class="form-control">
+            <input type="number" id="price" class="form-control"
+                   value="<%= (typeof car !== 'undefined') ? car.price : '' %>">
         </div>
         <div class="form-group">
-            <a href="/cars" class="btn btn-primary">Save</a>
+            <input type="submit" class="btn btn-primary" value="Save Car">
+            <!-- <a href="/cars" class="btn btn-primary">Save</a> -->
             <a href="/cars" class="btn btn-default">Cancel</a>
         </div>
     </form>

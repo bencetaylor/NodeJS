@@ -5,7 +5,7 @@ var getRentListMW = require('../middleware/rents/getRentList');
 var updateRentMW = require('../middleware/rents/updateRent');
 var getRentMW = require('../middleware/rents/getRent');
 var deleteRentMW = require('../middleware/rents/deleteRent');
-var rentModel = {};
+var rentModel = require('../models/rent');
 
 module.exports = function (app) {
 

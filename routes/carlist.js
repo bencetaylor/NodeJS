@@ -5,7 +5,7 @@ var getCarListMW = require('../middleware/cars/getCarList');
 var updateCarMW = require('../middleware/cars/updateCar');
 var getCarMW = require('../middleware/cars/getCar');
 var deleteCarMW = require('../middleware/cars/deleteCar');
-var carModel = {};
+var carModel = require('../models/car');
 
 module.exports = function (app) {
 

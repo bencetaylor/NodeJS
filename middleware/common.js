@@ -1,8 +1,5 @@
 /**
  * Load dependency from an object repository
- * @param objectRepository
- * @param propertyName
- * @returns {*}
  */
 
 function requireOption(objectRepository, propertyName) {

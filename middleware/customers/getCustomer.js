@@ -11,6 +11,7 @@ module.exports = function (objectrepository) {
 
     return function (req, res, next) {
         customerModel.findOne({
+            //_id: req.param('customerid')
             'PID': req.param('PID')
         }).exec(function (err, result) {
             if ((err) || (!result)) {

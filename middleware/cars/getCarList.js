@@ -15,7 +15,7 @@ module.exports = function (objectrepository) {
             if (err) {
                 return next(new Error('Error getting cars'));
             }
-            res.tpl.tasks = results;
+            res.tpl.cars = results;
             return next();
         });
     };
